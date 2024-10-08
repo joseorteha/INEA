@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>INEA</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Generador de Correo y Contraseña - INEA</h1>
+        <form id="dataForm">
+            <label for="state">Seleccione el estado:</label>
+            <select id="state" name="state" onchange="setStateNumber()" required>
+                <option value="" selected disabled>Seleccionar estado</option>
+                <option value="01">Aguascalientes</option>
+                <option value="02">Baja California</option>
+                <option value="03">Baja California Sur</option>
+                <option value="04">Campeche</option>
+                <option value="05">Coahuila</option>
+                <option value="06">Colima</option>
+                <option value="07">Chiapas</option>
+                <option value="08">Chihuahua</option>
+                <option value="09">Ciudad de México</option>
+                <option value="10">Durango</option>
+                <option value="11">Guanajuato</option>
+                <option value="12">Guerrero</option>
+                <option value="13">Hidalgo</option>
+                <option value="14">Jalisco</option>
+                <option value="15">México</option>
+                <option value="16">Michoacán</option>
+                <option value="17">Morelos</option>
+                <option value="18">Nayarit</option>
+                <option value="19">Nuevo León</option>
+                <option value="20">Oaxaca</option>
+                <option value="21">Puebla</option>
+                <option value="22">Querétaro</option>
+                <option value="23">Quintana Roo</option>
+                <option value="24">San Luis Potosí</option>
+                <option value="25">Sinaloa</option>
+                <option value="26">Sonora</option>
+                <option value="27">Tabasco</option>
+                <option value="28">Tamaulipas</option>
+                <option value="29">Tlaxcala</option>
+                <option value="30">Veracruz</option>
+                <option value="31">Yucatán</option>
+                <option value="32">Zacatecas</option>
+            </select>
+
+            <label for="genero">Género:</label>
+            <select id="genero">
+                <option value="H">Hombre</option>
+                <option value="M">Mujer</option>
+            </select>
+
+            <label for="curp">Ingrese su CURP:</label>
+            <input type="text" id="curp" placeholder="Ingrese su CURP" required>
+
+            <button type="button" onclick="generarCorreoYContrasena()">Generar</button>
+        </form>
+
+        <div class="result">
+            <p id="resultadoCorreo"></p>
+            <p id="resultadoContrasena"></p>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 José Ortega. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

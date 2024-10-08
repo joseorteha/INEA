@@ -1,0 +1,130 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: linear-gradient(135deg, rgba(29, 29, 29, 0.9), rgba(85, 85, 85, 0.9)), url('tu-imagen-de-fondo.jpg') no-repeat center center fixed; /* Fondo con gradiente y una imagen */
+    background-size: cover; /* Ajustar la imagen de fondo */
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column; /* Cambiar a columna para que el footer esté al final */
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* Asegurar que ocupe toda la altura de la vista */
+    padding: 20px;
+}
+
+.container {
+    background: rgba(255, 255, 255, 0.1); /* Fondo más transparente para el glassmorphism */
+    border-radius: 20px; /* Esquinas más redondeadas */
+    padding: 30px;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5); /* Sombra más suave */
+    backdrop-filter: blur(20px); /* Desenfoque más sutil */
+    width: 100%;
+    max-width: 400px;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+h1 {
+    color: #ffffff;
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 2rem; /* Tamaño de fuente responsivo */
+    transition: color 0.3s ease; /* Transición suave para el color */
+}
+
+label {
+    color: #ffffff;
+    font-weight: bold;
+    margin-top: 10px;
+    font-size: 1rem; /* Tamaño de fuente responsivo */
+}
+
+select, input {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ffffff;
+    border-radius: 10px; /* Esquinas redondeadas */
+    background-color: rgba(255, 255, 255, 0.2);
+    color: #ffffff; /* Color de texto blanco */
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Transición suave */
+    font-size: 1rem; /* Tamaño de fuente responsivo */
+}
+
+select:focus, input:focus {
+    background-color: rgba(255, 255, 255, 0.4);
+    outline: none;
+    transform: scale(1.03); /* Efecto de escala en el enfoque */
+}
+
+select option {
+    background-color: #1e1e1e; /* Fondo del menú desplegable */
+    color: #ffffff; /* Color del texto de las opciones */
+}
+
+button {
+    background-color: #4caf50;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 10px; /* Esquinas redondeadas */
+    cursor: pointer;
+    width: 100%;
+    margin-top: 20px;
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Transición suave */
+    font-size: 1rem; /* Tamaño de fuente responsivo */
+}
+
+button:hover {
+    background-color: #45a049;
+    transform: scale(1.05); /* Efecto de escala al pasar el ratón */
+}
+
+.result {
+    background: rgba(255, 255, 255, 0.1); /* Más transparencia */
+    margin-top: 20px;
+    padding: 10px;
+    border-radius: 10px; /* Esquinas redondeadas */
+    color: #ffffff;
+    text-align: center;
+    transition: background-color 0.3s ease; /* Transición suave para el fondo */
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Consultas de medios para responsividad */
+@media (max-width: 480px) {
+    .container {
+        padding: 20px; /* Reducir el padding en pantallas pequeñas */
+    }
+    
+    h1 {
+        font-size: 1.5rem; /* Reducir el tamaño de la fuente */
+    }
+    
+    button {
+        padding: 8px; /* Ajustar padding en el botón */
+    }
+    
+    select, input {
+        font-size: 0.9rem; /* Tamaño de fuente más pequeño */
+    }
+}
+
+footer {
+    text-align: center;
+    color: #ffffff;
+    margin-top: auto; /* Asegura que se empuje al final */
+    font-size: 0.9rem; /* Tamaño de fuente más pequeño */
+    padding: 10px; /* Espacio alrededor del texto */
+}
